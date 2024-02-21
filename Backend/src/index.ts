@@ -17,7 +17,7 @@ mongoose
 const app=express()
 app.use(express.json())
 app.use(cors())
-console.log("hello");
+
 
 
 app.get('/test',async(req:Request,res:Response)=>{
