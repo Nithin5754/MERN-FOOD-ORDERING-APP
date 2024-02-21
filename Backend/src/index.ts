@@ -3,6 +3,15 @@ import express,{Request,Response} from 'express'
 
 import cors from 'cors'
 import 'dotenv/config'
+import mongoose from 'mongoose'
+
+
+
+mongoose
+.connect(process.env.MONGODB_CONNECTION_STRING as string)
+.then(()=>console.log("database connected")
+).catch((err)=>console.log('database error: ',err)
+)
 
 
 const app=express()
@@ -20,7 +29,7 @@ app.all('*',(req:Request,res:Response)=>{
 
 
 
-app.listen(4000,()=>console.log("server started")
+app.listen(4000,()=>console.log("server started local host :4000")
 )
 
 
