@@ -4,6 +4,8 @@ import cors from 'cors'
 import 'dotenv/config'
 import mongoose from 'mongoose'
 
+import myUserRoute from './routes/myUserRoute'
+
 
 
 mongoose
@@ -19,9 +21,8 @@ app.use(cors())
 
 
 
-app.get('/test',async(req:Request,res:Response)=>{
-  res.json({message:'hello nithin joji '})
-})
+app.use('/api/my/user',myUserRoute)
+
 
 app.all('*',(req:Request,res:Response)=>{
   res.json({message:'error 404'})
@@ -29,7 +30,7 @@ app.all('*',(req:Request,res:Response)=>{
 
 
 
-app.listen(4000,()=>console.log("server started local host :4000")
+app.listen(7000,()=>console.log("server started local host :4000")
 )
 
 

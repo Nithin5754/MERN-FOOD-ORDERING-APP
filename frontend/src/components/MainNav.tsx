@@ -9,7 +9,7 @@ const {loginWithRedirect,isAuthenticated}=useAuth0()
  <>
     <span className="flex space-x-2 items-center">
       {
-        isAuthenticated?(<UsernameMenu/>):(<Button onClick={async ()=>await loginWithRedirect()} variant={'ghost'} className="font-bold hover:text-orange-500 hover:bg-white">login in</Button>)
+        isAuthenticated?(<UsernameMenu/>):(<Button onClick={async ()=>await loginWithRedirect()} variant='ghost' className="font-bold hover:text-orange-500 hover:bg-white">login in</Button>)
       }
     </span>
 
